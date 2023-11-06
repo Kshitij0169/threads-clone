@@ -8,6 +8,7 @@ const nextConfig = {
     typedRoutes: true,
   },
   images: {
+    domains: ["utfs.io"],
     remotePatterns: [
       {
         protocol: "https",
