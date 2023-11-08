@@ -25,7 +25,7 @@ const LeftSidebar = () => {
 
           return (
             <Link
-              href={link.route}
+              href={{ pathname: `${link.route}` }}
               key={link.label}
               className={`leftsidebar_link ${isActive && "bg-primary-500 "}`}
             >
@@ -44,6 +44,7 @@ const LeftSidebar = () => {
 
       <div className="mt-10 px-6">
         <SignedIn>
+          {/* @ts-ignore */}
           <SignOutButton signOutCallback={() => router.push("/sign-in")}>
             <div className="flex cursor-pointer gap-4 p-4">
               <Image
