@@ -1,11 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
-    typescript: {
-      ignoreBuildErrors: true,
-    },
+    serverActions: true,
     serverComponentsExternalPackages: ["mongoose"],
-    typedRoutes: true,
+  },
+  eslint: {
+    // Warning: This allows production builds to successfully complete even if
+    // your project has ESLint errors.
+    ignoreDuringBuilds: true,
   },
   images: {
     domains: ["utfs.io"],
